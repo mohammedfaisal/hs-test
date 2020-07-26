@@ -1,1 +1,31 @@
 backend/ems/target/
+
+## Angular ##
+# compiled output
+frontend/ems-app/dist/
+frontend/ems-app/tmp/
+frontend/ems-app/app/**/*.js
+frontend/ems-app/app/**/*.js.map
+
+# dependencies
+frontend/ems-app/node_modules/
+frontend/ems-app/bower_components/
+
+# IDEs and editors
+.idea/
+
+# misc
+.sass-cache/
+connect.lock/
+coverage/
+libpeerconnection.log/
+npm-debug.log
+testem.log
+typings/
+
+# e2e
+frontend/ems-app/e2e/*.js
+frontend/ems-app/e2e/*.map
+
+# System Files
+.DS_Store/

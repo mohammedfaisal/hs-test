@@ -1,0 +1,22 @@
+<h3 class="display-6">Employee Dashboard</h3>
+<hr />
+<div class="row" *ngIf="employee">
+    <div class="col-sm">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td scope="col">Name</td>
+                    <td>{{employee.name}}</td>
+                </tr>
+                <tr>
+                    <td scope="col">Code</td>
+                    <td>{{employee.code}}</td>
+                </tr>
+                <tr>
+                    <td scope="col">Designation</td>
+                    <td>{{employee.designation}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
