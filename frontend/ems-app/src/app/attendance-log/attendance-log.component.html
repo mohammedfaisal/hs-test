@@ -1,0 +1,28 @@
+<h3 class="display-6">Attendance Report</h3>
+<hr />
+<div class="row">
+    <div class="col-sm">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Code</th>
+                <th scope="col">Date</th>
+                <th scope="col">Duration</th>
+                <th scope="col">View</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let log of logs; let sn=index;">
+                    <td>{{sn+1}}</td>
+                    <td>{{log.name}}</td>
+                    <td>{{log.code}}</td>
+                    <td>{{log.attendanceDate | date : "longDate"}}</td>
+                    <td>{{log.duration | attendanceDuration}}</td>
+                    <td align="center"><a routerLink="/attendance/subreport/{{log.id}}" class="btn btn-dark">Details</a></td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+</div>

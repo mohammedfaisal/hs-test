@@ -1,32 +1,6 @@
-<h3 class="display-6">Employee Dashboard</h3>
-<hr />
-<div class="row" *ngIf="employee">
-    <div class="col-sm">
-        <table class="table table-bordered">
-            <tbody>
-                <tr>
-                    <td scope="col">Name</td>
-                    <td>{{employee.name}}</td>
-                </tr>
-                <tr>
-                    <td scope="col">Code</td>
-                    <td>{{employee.code}}</td>
-                </tr>
-                <tr>
-                    <td scope="col">Designation</td>
-                    <td>{{employee.designation}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<hr />
 <div class="row">
     <div class="col-sm-11">
-        <h4 class="h4">Attendance Dashboard / {{today | date: "longDate"}}</h4>
-    </div>
-    <div class="col-sm-1">
-        <button *ngIf="employee" type="button" class="btn btn-dark pull-right" (click)="postAttendance()">Punch</button>
+        <h3 class="display-6">Attendance Report / {{attendance.name}} / {{attendance.attendanceDate | date: "longDate"}}</h3>
     </div>
 </div>
 <hr />
@@ -43,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let entry of attendanceEntries; let sn=index">
+                <tr *ngFor="let entry of attendanceEntries; let sn=index;">
                     <td>{{sn+1}}</td>
                     <td>{{entry.punchIn | date : "medium"}}</td>
                     <td>{{entry.punchOut | date : "medium"}}</td>
@@ -56,7 +30,7 @@
                     <td></td>
                     <td></td>
                     <td><strong>Total Duration</strong></td>
-                    <td><strong>{{totalDuration | attendanceDuration}}</strong></td>
+                    <td><strong>{{attendance.duration | attendanceDuration}}</strong></td>
                     <td></td>
                 </tr>
             </tfoot>

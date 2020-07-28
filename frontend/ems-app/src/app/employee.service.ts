@@ -12,7 +12,7 @@ export class EmployeeService {
   private readonly saveUrl: string = '/ems/employee/save';
   private readonly getAllUrl: string = '/ems/employee/list';
   private readonly deleteUrl: string = '/ems/employee/delete/';
-
+  
   constructor(private http: HttpClient) { }
 
   get(id: number): Observable<Employee> {
